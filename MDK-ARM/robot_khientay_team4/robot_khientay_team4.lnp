@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"robot_khientay_team4\startup_stm32f103xb.o"
+"robot_khientay_team4\main.o"
+"robot_khientay_team4\stm32f1xx_it.o"
+"robot_khientay_team4\stm32f1xx_hal_msp.o"
+"robot_khientay_team4\stm32f1xx_hal_gpio_ex.o"
+"robot_khientay_team4\stm32f1xx_hal_tim.o"
+"robot_khientay_team4\stm32f1xx_hal_tim_ex.o"
+"robot_khientay_team4\stm32f1xx_hal.o"
+"robot_khientay_team4\stm32f1xx_hal_rcc.o"
+"robot_khientay_team4\stm32f1xx_hal_rcc_ex.o"
+"robot_khientay_team4\stm32f1xx_hal_gpio.o"
+"robot_khientay_team4\stm32f1xx_hal_dma.o"
+"robot_khientay_team4\stm32f1xx_hal_cortex.o"
+"robot_khientay_team4\stm32f1xx_hal_pwr.o"
+"robot_khientay_team4\stm32f1xx_hal_flash.o"
+"robot_khientay_team4\stm32f1xx_hal_flash_ex.o"
+"robot_khientay_team4\stm32f1xx_hal_exti.o"
+"robot_khientay_team4\system_stm32f1xx.o"
+"robot_khientay_team4\ps2.o"
+--strict --scatter "robot_khientay_team4\robot_khientay_team4.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "robot_khientay_team4.map" -o robot_khientay_team4\robot_khientay_team4.axf
