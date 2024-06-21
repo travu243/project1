@@ -1,5 +1,7 @@
 Robot xoay bánh
 
+![image](https://hackmd.io/_uploads/By6ElkmU0.png)
+
 -sử dụng thư viện hal để init và set gpio, timer, spi
 
 	Sử dụng ps2 để điều khiển
