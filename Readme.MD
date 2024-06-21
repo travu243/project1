@@ -3,7 +3,6 @@ Robot xoay bánh
 ![image](https://hackmd.io/_uploads/By6ElkmU0.png)
 
 -sử dụng thư viện hal để init và set gpio, timer, spi
-
 	Sử dụng ps2 để điều khiển
 - include file PS2.c và PS2.h vào main để sử dụng
 - tạo một object PS2Buttons ps2;
@@ -12,10 +11,13 @@ Robot xoay bánh
 - timer2 cho update: prescaler=6400-1, period=100-1 và enable ngắt cho timer2
 - trong hàm main(), gọi hàm PS2_Init(&htim1,&ps2) để init ps2
 - dùng ngắt tràn timer để cập nhật trạng thái nút (2 cách):
+
 - cách 1: đặt trong file main.c
+```
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
   if(htim->Instance == TIM2) PS2_Update();
 }
+```
 - cách 2:
 vào file stm32f1xx_it.c
 đặt PS2_Update() vào hàm TIM2_IRQHandler()
